@@ -35,7 +35,7 @@
 
             <!-- Nav Item - Update Berita -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/u_news') ?>">
+                <a class="nav-link" href="<?= base_url('admin/u_news'); ?>">
                     <i class="fas fa-newspaper"></i>
                     <span>Update Berita</span></a>
             </li>
@@ -45,7 +45,7 @@
 
             <!-- Nav Item - Update Video -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/u_vid') ?>">
+                <a class="nav-link" href="<?= base_url('admin/u_vid'); ?>">
                     <i class="fab fa-youtube"></i>
                     <span>Update Video</span></a>
             </li>
@@ -55,7 +55,7 @@
 
             <!-- Nav Item - Update Tips -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/u_tips') ?>">
+                <a class="nav-link" href="<?= base_url('admin/u_tips'); ?>">
                     <i class="far fa-lightbulb"></i>
                     <span>Update Tips</span></a>
             </li>
