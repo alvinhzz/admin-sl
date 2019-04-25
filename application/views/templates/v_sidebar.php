@@ -55,7 +55,7 @@
 
             <!-- Nav Item - Update Tips -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="<?= base_url('admin/u_tips') ?>">
                     <i class="far fa-lightbulb"></i>
                     <span>Update Tips</span></a>
             </li>
