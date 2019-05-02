@@ -7,7 +7,10 @@
                                         <p>Jumlah berita yang sudah di share</p>
                                 </div>
                                 <h2 class="card-title text-center font-weight-bold">0</h2>
-                                <center><a href="<?= base_url('admin/u_news') ?>" class="btn btn-primary">Tambah Berita</a></center>
+                                <div class="row">
+                                        <a href="<?= base_url('admin/u_news') ?>" class="btn btn-primary btn-sm col mr-2">Tambah Berita</a>
+                                        <a href="#" class="btn btn-success btn-sm col">Lihat Berita</a>
+                                </div>
                         </div>
                 </div>
         </div>
@@ -19,7 +22,10 @@
                                         <p>Jumlah video yang sudah di share</p>
                                 </div>
                                 <h2 class="card-title text-center font-weight-bold">0</h2>
-                                <center><a href="<?= base_url('admin/u_vid') ?>" class="btn btn-primary">Tambah Video</a></center>
+                                <div class="row">
+                                        <a href="<?= base_url('admin/u_vid') ?>" class="btn btn-primary btn-sm col mr-2">Tambah Video</a>
+                                        <a href="#" class="btn btn-success btn-sm col">Lihat Video</a>
+                                </div>
                         </div>
                 </div>
         </div>
@@ -31,7 +37,10 @@
                                         <p>Jumlah tips yang sudah di share</p>
                                 </div>
                                 <h2 class="card-title text-center font-weight-bold">0</h2>
-                                <center><a href="<?= base_url('admin/u_tips') ?>" class="btn btn-primary">Tambah Tips</a></center>
+                                <div class="row">
+                                        <a href="<?= base_url('admin/u_tips') ?>" class="btn btn-primary btn-sm col mr-2">Tambah Tips</a>
+                                        <a href="#" class="btn btn-success btn-sm col">Lihat Tips</a>
+                                </div>
                         </div>
                 </div>
         </div>
