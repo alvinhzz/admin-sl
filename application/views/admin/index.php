@@ -8,7 +8,7 @@
                                 </div>
                                 <h2 class="card-title text-center font-weight-bold">0</h2>
                                 <div class="row">
-                                        <a href="<?= base_url('admin/u_news') ?>" class="btn btn-primary btn-sm col mr-2">Tambah Berita</a>
+                                        <a href="<?= base_url('news') ?>" class="btn btn-primary btn-sm col mr-2">Tambah Berita</a>
                                         <a href="#" class="btn btn-success btn-sm col">Lihat Berita</a>
                                 </div>
                         </div>
@@ -23,7 +23,7 @@
                                 </div>
                                 <h2 class="card-title text-center font-weight-bold">0</h2>
                                 <div class="row">
-                                        <a href="<?= base_url('admin/u_vid') ?>" class="btn btn-primary btn-sm col mr-2">Tambah Video</a>
+                                        <a href="<?= base_url('video') ?>" class="btn btn-primary btn-sm col mr-2">Tambah Video</a>
                                         <a href="#" class="btn btn-success btn-sm col">Lihat Video</a>
                                 </div>
                         </div>
@@ -38,7 +38,7 @@
                                 </div>
                                 <h2 class="card-title text-center font-weight-bold">0</h2>
                                 <div class="row">
-                                        <a href="<?= base_url('admin/u_tips') ?>" class="btn btn-primary btn-sm col mr-2">Tambah Tips</a>
+                                        <a href="<?= base_url('tips') ?>" class="btn btn-primary btn-sm col mr-2">Tambah Tips</a>
                                         <a href="#" class="btn btn-success btn-sm col">Lihat Tips</a>
                                 </div>
                         </div>
