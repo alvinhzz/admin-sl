@@ -21,6 +21,18 @@
     <!-- ckeditor -->
     <script type="text/javascript" src="<?= base_url(); ?>/vendor/ckeditor/ckeditor.js"></script>
 
+    <style>
+    .berita{
+        background-color: white;
+        color: black;
+    }
+    .video{
+        background-color: white;
+        color: black;
+        font-size: 12px;
+    }
+    </style>
+
 </head>
 
 <body class="bg-gradient-primary">

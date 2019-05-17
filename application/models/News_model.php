@@ -11,6 +11,27 @@ class News_model extends CI_Model
     public $deskripsi;
     public $artikel;
 
+    public function rules()
+    {
+        return[
+            ['field' => 'newsJudul',
+            'label' => 'newsJudul',
+            'rules' => 'required'],
+
+            ['field' => 'newsDeskrip',
+            'label' => 'newsDeskrip',
+            'rules' => 'required'],
+
+            ['field' => 'newsThumb',
+            'label' => 'newsThumb',
+            'rules' => 'required'],
+
+            ['field' => 'newsArtikel',
+            'label' => 'newsArtikel',
+            'rules' => 'required']
+        ];
+    }
+
     public function posting()
     {
         $post = $this->input->post();
@@ -23,6 +44,8 @@ class News_model extends CI_Model
 
     }
 
-
-
+    public function tampil()
+    {
+        return $this->db->query("SELECT * FROM tb_berita ORDER BY id DESC")->result();
+    }
 }

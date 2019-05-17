@@ -15,7 +15,6 @@ class Admin extends CI_Controller
     function index()
     {
         $data['judul'] = 'Dashboard';
-        $data['admin'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates/v_header', $data);
         $this->load->view('templates/v_sidebar');
         $this->load->view('templates/v_navbar', $data);

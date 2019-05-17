@@ -24,7 +24,7 @@ class Video_model extends CI_Model
 
             ['field' => 'vidDeskrip',
             'label' => 'deskripVid',
-            'rules' => 'raquired'],
+            'rules' => 'required'],
 
             ['field' => 'vidLink',
             'label' => 'linkVid',
@@ -43,4 +43,8 @@ class Video_model extends CI_Model
         $this->db->insert($this->_table, $this);
     }
 
+    public function tampil()
+    {
+        return $this->db->query("SELECT * FROM tb_video ORDER BY id DESC")->result();
+    }
 }

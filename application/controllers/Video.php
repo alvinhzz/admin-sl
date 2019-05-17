@@ -35,15 +35,38 @@ class Video extends CI_Controller
 
         if ($validation->run()) {
             $simpan->posting();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
+            $this->session->set_flashdata('success', 'berhasil diposting!');
+            
+            $data['judul'] = 'Update Video';
+            $this->load->view('templates/v_header', $data);
+            $this->load->view('templates/v_sidebar');
+            $this->load->view('templates/v_navbar', $data);
+            $this->load->view('admin/v_updateVid'); 
+            $this->load->view('templates/v_footercont');
+            $this->load->view('templates/v_logoutModal');
+            $this->load->view('templates/v_footer');
+        }else{
+            $this->session->set_flashdata('failed', 'tidak boleh kosong');
+            $data['judul'] = 'Update Video';
+            $this->load->view('templates/v_header', $data);
+            $this->load->view('templates/v_sidebar');
+            $this->load->view('templates/v_navbar', $data);
+            $this->load->view('admin/v_updateVid'); 
+            $this->load->view('templates/v_footercont');
+            $this->load->view('templates/v_logoutModal');
+            $this->load->view('templates/v_footer');
         }
+    }
 
-        $data['judul'] = 'Update Video';
-        $data['admin'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
+    function tampilkan()
+    {
+        $tampil = $this->video_model;
+        $data['tampilkan'] = $tampil->tampil();
+        $data['judul'] = 'Video';
         $this->load->view('templates/v_header', $data);
         $this->load->view('templates/v_sidebar');
         $this->load->view('templates/v_navbar', $data);
-        $this->load->view('admin/v_updateVid'); 
+        $this->load->view('admin/v_tampilVid', $data); 
         $this->load->view('templates/v_footercont');
         $this->load->view('templates/v_logoutModal');
         $this->load->view('templates/v_footer');

@@ -1,0 +1,35 @@
+[33mcommit d1fdf34c1660646ae4797f4bc3ccde4da4633219[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: alvinhzz <alvinkamtis815@gmail.com>
+Date:   Sat May 11 07:31:27 2019 +0700
+
+    membuat insert table
+
+[33mcommit 333e7fc657beb9b4f5130c269293a9510fcacc13[m
+Author: alvinhzz <alvinkamtis815@gmail.com>
+Date:   Thu May 2 15:32:35 2019 +0700
+
+    eksport file sql
+
+[33mcommit ed375e44b9060376543ec8bb3563e65ad2c60df2[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: alvinhzz <alvinkamtis815@gmail.com>
+Date:   Thu Apr 25 20:44:01 2019 +0700
+
+    tambah form untuk tampilan update news, tips, dan vid
+
+[33mcommit 0de7a7c55033412cc1f91241c5550583424bac71[m
+Author: alvinhzz <alvinkamtis815@gmail.com>
+Date:   Thu Apr 25 19:43:52 2019 +0700
+
+    menambah tampilan pada dashboard
+
+[33mcommit 00164f423e812ed5c7f30d81abe5ea317d714a6a[m
+Author: alvinhzz <alvinkamtis815@gmail.com>
+Date:   Wed Apr 24 04:43:09 2019 +0700
+
+    create README.txt for information
+
+[33mcommit 224896c9cf49cefe8cb19d4f3763d72353eebdf9[m
+Author: alvinhzz <alvinkamtis815@gmail.com>
+Date:   Wed Apr 24 04:37:37 2019 +0700
+
+    upload admin sl ke github

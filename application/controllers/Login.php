@@ -11,8 +11,11 @@ class Login extends CI_Controller
 
     function index()
     {
-        $this->form_validation->set_rules('username', 'Username', 'trim|required');
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|alpha_numeric');
         $this->form_validation->set_rules('password', 'Password', 'required');
+        $this->form_validation->set_message('required', 'username/password tidak boleh kosong');
+        $this->form_validation->set_message('alpha_numeric', 'username hanya kombinasi huruf dan angka');
+        
 
         if ($this->form_validation->run() == FALSE) {
             $data['judul'] = 'Login Admin';
@@ -20,6 +23,7 @@ class Login extends CI_Controller
             $this->load->view('login/index');
             $this->load->view('templates/v_footer');
         } else {
+            $this->session->set_flashdata('failed', 'maaf, kombinasi username dan password salah');
             $this->_login();
         }
     }
@@ -54,7 +58,7 @@ class Login extends CI_Controller
     {
         $this->session->unset_userdata('username');
         $this->session->sess_destroy();
-
+        
         redirect(base_url('login'));
     }
 }

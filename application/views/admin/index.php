@@ -8,8 +8,8 @@
                                 </div>
                                 <h2 class="card-title text-center font-weight-bold">0</h2>
                                 <div class="row">
-                                        <a href="<?= base_url('news') ?>" class="btn btn-primary btn-sm col mr-2">Tambah Berita</a>
-                                        <a href="#" class="btn btn-success btn-sm col">Lihat Berita</a>
+                                        <a href="<?= base_url('news') ?>" class="btn btn-success btn-sm col mr-2">Tambah Berita</a>
+                                        <a href="<?= base_url('news/tampilkan') ?>" class="btn btn-primary btn-sm col">Lihat Berita</a>
                                 </div>
                         </div>
                 </div>
@@ -23,8 +23,8 @@
                                 </div>
                                 <h2 class="card-title text-center font-weight-bold">0</h2>
                                 <div class="row">
-                                        <a href="<?= base_url('video') ?>" class="btn btn-primary btn-sm col mr-2">Tambah Video</a>
-                                        <a href="#" class="btn btn-success btn-sm col">Lihat Video</a>
+                                        <a href="<?= base_url('video') ?>" class="btn btn-success btn-sm col mr-2">Tambah Video</a>
+                                        <a href="<?= base_url('video/tampilkan') ?>" class="btn btn-primary btn-sm col">Lihat Video</a>
                                 </div>
                         </div>
                 </div>
@@ -38,8 +38,8 @@
                                 </div>
                                 <h2 class="card-title text-center font-weight-bold">0</h2>
                                 <div class="row">
-                                        <a href="<?= base_url('tips') ?>" class="btn btn-primary btn-sm col mr-2">Tambah Tips</a>
-                                        <a href="#" class="btn btn-success btn-sm col">Lihat Tips</a>
+                                        <a href="<?= base_url('tips') ?>" class="btn btn-success btn-sm col mr-2">Tambah Tips</a>
+                                        <a href="#" class="btn btn-primary btn-sm col">Lihat Tips</a>
                                 </div>
                         </div>
                 </div>

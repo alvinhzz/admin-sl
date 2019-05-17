@@ -10,12 +10,14 @@ class Tips extends CI_Controller
         if ($this->session->userdata('status') != 'login') {
             redirect(base_url('login'));
         }
+
+        $this->load->model('tips_model');
+        $this->load->library('form_validation');
     }
 
     function index()
     {
         $data['judul'] = 'Update Tips';
-        $data['admin'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates/v_header', $data);
         $this->load->view('templates/v_sidebar');
         $this->load->view('templates/v_navbar', $data);
@@ -23,6 +25,36 @@ class Tips extends CI_Controller
         $this->load->view('templates/v_footercont');
         $this->load->view('templates/v_logoutModal');
         $this->load->view('templates/v_footer');
+    }
+    
+    function postingan()
+    {
+        $simpan = $this->tips_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($simpan->rules());
+        
+        if ($validation->run()) {
+            $simpan->posting();
+            $this->session->set_flashdata('success', 'berhasil diposting!');
+            $data['judul'] = 'Update Tips';
+            $this->load->view('templates/v_header', $data);
+            $this->load->view('templates/v_sidebar');
+            $this->load->view('templates/v_navbar', $data);
+            $this->load->view('admin/v_updateTips');
+            $this->load->view('templates/v_footercont');
+            $this->load->view('templates/v_logoutModal');
+            $this->load->view('templates/v_footer');
+        }else{
+            $this->session->set_flashdata('failed', 'tidak boleh kosong!');
+            $data['judul'] = 'Update Tips';
+            $this->load->view('templates/v_header', $data);
+            $this->load->view('templates/v_sidebar');
+            $this->load->view('templates/v_navbar', $data);
+            $this->load->view('admin/v_updateTips');
+            $this->load->view('templates/v_footercont');
+            $this->load->view('templates/v_logoutModal');
+            $this->load->view('templates/v_footer');
+        }
     }
 
 }
