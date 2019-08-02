@@ -42,7 +42,7 @@
                         <!-- input artikel -->
                         <div class="form-group">
                                 <label for="newsArtikel">Tulis Artikel</label>
-                                <textarea class="form-control ckeditor <?= form_error('newsArtikel') ? 'is-invalid':'' ?>" name="newsArtikel" rows="3"></textarea>
+                                <textarea class="form-control <?= form_error('newsArtikel') ? 'is-invalid':'' ?>" name="newsArtikel" rows="4"></textarea>
                         </div>
 
                         <!-- submit button -->

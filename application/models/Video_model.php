@@ -3,12 +3,11 @@
 class Video_model extends CI_Model
 {
 
-    private $_table = "tb_video";
+    private $_table = "video";
 
     public $id;
     public $judul;
     public $gambar = "default.jpg";
-    public $deskripsi;
     public $link;
 
     public function rules()
@@ -20,10 +19,6 @@ class Video_model extends CI_Model
 
             ['field' => 'vidThumb',
             'label' => 'thumbVid',
-            'rules' => 'required'],
-
-            ['field' => 'vidDeskrip',
-            'label' => 'deskripVid',
             'rules' => 'required'],
 
             ['field' => 'vidLink',
@@ -38,13 +33,34 @@ class Video_model extends CI_Model
 
         $this->judul = $post['vidJudul'];
         $this->gambar = $post['vidThumb'];
-        $this->deskripsi = $post['vidDeskrip'];
         $this->link = $post['vidLink'];
         $this->db->insert($this->_table, $this);
     }
 
     public function tampil()
     {
-        return $this->db->query("SELECT * FROM tb_video ORDER BY id DESC")->result();
+        return $this->db->query("SELECT * FROM video ORDER BY id DESC")->result();
+    }
+ 
+    public function update()
+    {
+        $data = [
+            "judul" => $this->input->post('vidJudul', true),
+            "gambar" => $this->input->post('vidThumb', true),
+            "link" => $this->input->post('vidLink', true)
+        ];
+        
+        $this->db->where('id', $this->input->post('id'));
+        $this->db->update($this->_table, $data);
+    }
+
+    public function hapus($id)
+    {
+        return $this->db->delete($this->_table, array("id" => $id));
+    }
+    
+    public function getById($id)
+    {
+        return $this->db->get_where($this->_table, ["id" => $id])->row_array();
     }
 }

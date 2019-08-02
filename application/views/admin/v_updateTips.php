@@ -23,7 +23,7 @@
                 <form action="<?= base_url('tips/postingan'); ?>" method="post" enctype="multipart/form-data">
                         <!-- input judul -->
                         <div class="form-group">
-                                <label>Judul Berita</label>
+                                <label>Judul Tips</label>
                                 <input type="text" class="form-control <?= form_error('tipsJudul') ? 'is-invalid':'' ?>" name="tipsJudul">
                         </div>
 
@@ -42,7 +42,7 @@
                         <!-- input artikel -->
                         <div class="form-group">
                                 <label>Tulis Artikel</label>
-                                <textarea class="form-control ckeditor <?= form_error('tipsArtikel') ? 'is-invalid':'' ?>" name="tipsArtikel" rows="3"></textarea>
+                                <textarea class="form-control <?= form_error('tipsArtikel') ? 'is-invalid':'' ?>" name="tipsArtikel" rows="4"></textarea>
                         </div>
 
                         <!-- submit button -->

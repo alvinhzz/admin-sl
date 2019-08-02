@@ -16,8 +16,8 @@
         <td><?= $tampil->judul ?></td>
         <td>
             <div class="container">
-            <a class="btn btn-warning btn-sm" href="<?= base_url('video/edit/') ?><?= $tampil->id ?>" role="button">Edit</a>&nbsp
-            <a class="btn btn-danger btn-sm" href="<?= base_url('video/hapus/') ?><?= $tampil->id ?>" role="button">Delete</a>
+            <a class="btn btn-warning btn-sm" href="<?= base_url('tips/edit/') ?><?= $tampil->id ?>" role="button">Edit</a>&nbsp
+            <a class="btn btn-danger btn-sm" href="<?= base_url('tips/hapus/') ?><?= $tampil->id ?>" role="button">Delete</a>
             </div>
         </td>
         </tr>

@@ -22,7 +22,7 @@
                 <form action="<?= base_url('video/postingan') ?>" method="post" enctype="multipart/form-data">
                         <!-- input judul -->
                         <div class="form-group">
-                                <label for="judulVid">Judul Berita</label>
+                                <label for="judulVid">Judul Video</label>
                                 <input type="text" class="form-control <?= form_error('vidJudul') ? 'is-invalid':'' ?>" name="vidJudul"/>
                         </div>
 

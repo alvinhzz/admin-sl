@@ -1,4 +1,5 @@
 <?php
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class News extends CI_Controller
 {
@@ -71,6 +72,39 @@ class News extends CI_Controller
         $this->load->view('templates/v_footercont');
         $this->load->view('templates/v_logoutModal');
         $this->load->view('templates/v_footer');
+    }
+
+    function edit($id)
+    {
+
+        $edit = $this->news_model;
+        $data['edit'] = $edit->getById($id);
+        $validation = $this->form_validation;
+        $validation->set_rules($edit->rules());
+        
+        if ($validation->run() == FALSE) {
+            $data['judul'] = 'Edit Berita';
+            $this->load->view('templates/v_header');
+            $this->load->view('templates/v_sidebar');
+            $this->load->view('templates/v_navbar', $data);
+            $this->load->view('admin/v_editNews', $data);
+            $this->load->view('templates/v_footercont');
+            $this->load->view('templates/v_logoutModal');
+            $this->load->view('templates/v_footer');
+        }else{
+            $edit->update();
+            $this->session->set_flashdata('success', 'berhasil diedit!');
+            redirect('news/tampilkan');
+        }
+    }
+
+    function hapus($id = null)
+    {
+        if (!isset($id)) show_404();
+        
+        if ($this->news_model->hapus($id)) {
+            redirect(site_url('news/tampilkan'));
+        }
     }
 
 }
